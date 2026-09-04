@@ -6,7 +6,8 @@
 // CWebApplication properties can be configured here.
 return array(
     'basePath' => dirname(__FILE__) . DIRECTORY_SEPARATOR . '..',
-    'name' => 'OPTIMO SCHOOL',
+    'name' => 'EduNexus',
+    'defaultController' => 'dashboard',
     //Default theme
     'theme' => 'classic',
     //Default time zone
@@ -56,6 +57,9 @@ return array(
             // ImageMagick setup path
             'params' => array('directory' => '/opt/local/bin'),
         ),
+        'cache' => array(
+            'class' => 'CDbCache',
+        ),
         'user' => array(
             // enable cookie-based authentication
             'allowAutoLogin' => true,
@@ -64,7 +68,7 @@ return array(
         'session' => array(
             'class' => 'CDbHttpSession',
             'connectionID' => 'db',
-            'sessionName' => 'OPTIMOSCHOOL',
+            'sessionName' => 'EduNexus',
             'autoCreateSessionTable' => false,
             'sessionTableName' => 'os_yiisession',
             'cookieMode' => 'only',
@@ -109,9 +113,9 @@ return array(
     // using Yii::app()->params['paramName']
     'params' => array(
         // this is used in contact page
-        'adminName' => 'OPTIMO SCHOOL',
+        'adminName' => 'EduNexus',
         'PoweredBy' => 'Powered by Momtaj Trading Pvt. Ltd',
-        'tagLine' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu arcu vitae sapien dignissim pretium in nec justo. Vestibulum dictum euismod velit, semper tincidunt libero rutrum eget. Maecenas odio est, pretium sagittis odio et, semper ultricies quam.',
+        'tagLine' => 'EduNexus is an all-in-one school management platform designed to streamline administrative workflows, track academic progress, and simplify campus operations. By connecting administrators, teachers, parents, and students in one unified ecosystem, it ensures real-time communication and efficient daily school management.',
         'adminEmail' => 'info@domain.com',
         'noreply' => 'noreply@domain.com',
         'pageSize' => 25,

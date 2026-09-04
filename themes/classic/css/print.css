@@ -53,3 +53,106 @@ span.required{
 .table-head{
     background-color: #999999;
 }
+
+/* Dashboard Print Styles */
+.dashboard-print {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+.dashboard-print .report-header h1 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.dashboard-print .report-header h3 {
+    font-size: 16px;
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.dashboard-print .report-header h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.dashboard-print .report-header p {
+    font-size: 11px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.dashboard-print h3 {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
+
+.dashboard-print table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.dashboard-print table th,
+.dashboard-print table td {
+    border: 1px solid #ddd;
+    padding: 6px 8px;
+    text-align: left;
+}
+
+.dashboard-print table th {
+    background-color: #f5f5f5;
+    font-weight: bold;
+}
+
+.dashboard-print table td.text-right {
+    text-align: right;
+}
+
+.dashboard-print table td.text-center {
+    text-align: center;
+}
+
+.dashboard-print .report-footer {
+    margin-top: 30px;
+    padding-top: 10px;
+    border-top: 1px solid #ddd;
+}
+
+.dashboard-print .report-footer p {
+    font-size: 10px;
+    color: #999;
+}
+
+@media print {
+    .dashboard-print {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .dashboard-print .report-header h1 {
+        font-size: 18px;
+    }
+    
+    .dashboard-print h3 {
+        font-size: 13px;
+    }
+    
+    .dashboard-print table {
+        font-size: 11px;
+    }
+    
+    .dashboard-print table th,
+    .dashboard-print table td {
+        padding: 4px 6px;
+    }
+}
