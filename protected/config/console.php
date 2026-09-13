@@ -7,10 +7,18 @@ return array(
     'name' => 'My Console Application',
     // preloading 'log' component
     'preload' => array('log'),
+    // autoloading model and component classes
+    'import' => array(
+        'application.models.*',
+        'application.components.*',
+    ),
     // application components
     'components' => array(
         // database settings are configured in database.php
         'db' => require(dirname(__FILE__) . '/database.php'),
+        'cache' => array(
+            'class' => 'application.components.LruFileCache',
+        ),
         'log' => array(
             'class' => 'CLogRouter',
             'routes' => array(

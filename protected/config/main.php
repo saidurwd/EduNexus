@@ -58,7 +58,7 @@ return array(
             'params' => array('directory' => '/opt/local/bin'),
         ),
         'cache' => array(
-            'class' => 'CDbCache',
+            'class' => 'application.components.LruFileCache',
         ),
         'user' => array(
             // enable cookie-based authentication
