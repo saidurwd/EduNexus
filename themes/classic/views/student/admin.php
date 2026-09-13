@@ -98,6 +98,14 @@ Yii::app()->clientScript->registerScript('reload-pageSetUp', "
                                     'htmlOptions' => array('class' => 'text-center width-30'),
                                 ),
                                 array(
+                                    'header' => 'UID',
+                                    'name' => 'id',
+                                    'type' => 'raw',
+                                    'value' => '$data->id',
+                                    'filter' => CHtml::activeTextField($model, 'id', array('class' => 'form-control')),
+                                    'htmlOptions' => array('class' => 'text-center width-80'),
+                                ),
+                                array(
                                     'name' => 'sid',
                                     'type' => 'raw',
                                     'value' => '$data->sid',
