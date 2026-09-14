@@ -34,7 +34,7 @@ return array(
     ),
     // application components
     'components' => array(
-//        'clientScript' => array(
+        //        'clientScript' => array(
 //            'packages' => array(
 //                'jquery' => array(
 //                    'baseUrl' => '//ajax.googleapis.com/ajax/libs/jquery/2.0.3/',
@@ -75,18 +75,19 @@ return array(
             'timeout' => 3600,
         ),
         // uncomment the following to enable URLs in path-format
-        /* 'urlManager' => array(
-          'urlFormat' => 'path',
-          'showScriptName' => false,
-          'urlSuffix' => '.html',
-          'rules' => array(
-          'defaultController' => 'login',
-          '<action>' => 'site/<action>',
-          '<controller:\w+>/<id:\d+>' => '<controller>/view',
-          '<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
-          '<controller:\w+>/<action:\w+>' => '<controller>/<action>',
-          ),
-          ), */
+        'urlManager' => array(
+            'urlFormat' => 'path',
+            'showScriptName' => false,
+            'urlSuffix' => '.html',
+            'rules' => array(
+                'defaultController' => 'login',
+                'POST hikvision/event' => 'hikvision/event',
+                '<action>' => 'site/<action>',
+                '<controller:\w+>/<id:\d+>' => '<controller>/view',
+                '<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
+                '<controller:\w+>/<action:\w+>' => '<controller>/<action>',
+            ),
+        ),
         // database settings are configured in database.php
         'db' => require(dirname(__FILE__) . '/database.php'),
         'errorHandler' => array(
@@ -100,12 +101,12 @@ return array(
                     'class' => 'CFileLogRoute',
                     'levels' => 'error, warning',
                 ),
-            // uncomment the following to show log messages on web pages
-            /*
-              array(
-              'class'=>'CWebLogRoute',
-              ),
-             */
+                // uncomment the following to show log messages on web pages
+                /*
+                  array(
+                  'class'=>'CWebLogRoute',
+                  ),
+                 */
             ),
         ),
     ),
